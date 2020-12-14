@@ -1,0 +1,18 @@
+.container-select-bar {
+	width: 100%;
+	padding-bottom: 28px;
+}
+
+.select-bar {
+	width: 460px;
+	position: fixed;
+	z-index: 10;
+	height: 25px;
+}
+
+@media only screen and (max-width: 615px) /* and (min-width: 795px) */ {
+	.select-bar {
+    width: 340px;
+    height: 20px;
+	}
+}

@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+}
+
+
+.container-select-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.select-bar {
+  width: 50vh;
+  margin: 0 auto;
+}
+
+.options {
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+.card-container {
+	text-align: center;
+	width: 320px;
+	margin: 20px auto;
+	background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+	/* background-image: linear-gradient(to right, #ffdfb1 0%, #fdaa8f 100%); */
+	border-radius: 15px;
+	border: 2px solid rgb(17, 17, 133);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.icon-sun {
+	color: rgb(17, 17, 133);
+}
+
+.icon-moon {
+	color: rgb(17, 17, 133);
+}
+
+.icon-plus {
+	color: rgb(17, 17, 133);
+}
+
+.icon-minus {
+	color: rgb(17, 17, 133);
+}
+
+
+.icon {
+  grid-column-start: 1;
+  justify-self: start;
+}
+
+.center {
+	margin: 15px auto;
+  display: grid;
+  grid-template-columns: 48px auto;
+	align-items: center;
+	width: 150px;
+}
+
+
+.temperature {
+	grid-column-start: 2;
+	font-family: "Lobster";
+	justify-self: start;
+}
+
+.day {
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 30px;
+}
+
+.description {
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+}

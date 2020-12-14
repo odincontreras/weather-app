@@ -1,0 +1,11 @@
+.App {
+  background-color: #b7e7ff;
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

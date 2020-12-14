@@ -1,0 +1,36 @@
+.container {
+  width: 320px;
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: #424242;
+}
+
+.day-row {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.day-row-container {
+  padding-top: 10px;
+}
+
+.placeholder-temperature {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.icon-round {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.description-placeholder {
+  margin-top: 25px;
+  padding-bottom: 21px;
+}

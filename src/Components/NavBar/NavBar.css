@@ -1,0 +1,33 @@
+.title {
+	font-family: "Permanent Marker", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	font-size: 2rem;
+}
+
+.navbar {
+	width: 460px;
+	margin: 0 auto;
+  background-color: #ffa42e;
+}
+
+.buttons {
+	width: 100%;
+}
+
+.button {
+	width: 50%;
+	height: 38px;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 615px){
+	.navbar {
+		width: 340px;
+	}
+	.title {
+		font-size: 1.5rem;
+	}
+	.button {
+		height: 30px;
+	}
+}

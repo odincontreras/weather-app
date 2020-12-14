@@ -1,0 +1,37 @@
+.graph-container {
+	width: 800px;
+	margin: 0px auto;
+	padding: 23px 0px;
+}
+
+@media only screen and (max-width: 909px) and (min-width: 795px) {
+	.graph-container {
+		width: 700px;
+		margin: 0px auto;
+		padding: 23px 0px;
+	}
+}
+
+@media only screen and (max-width: 795px) and (min-width: 655px) {
+	.graph-container {
+		width: 600px;
+		margin: 0px auto;
+		padding: 23px 0px;
+	}
+}
+
+@media only screen and (max-width: 655px) and (min-width: 526px) {
+	.graph-container {
+		width: 500px;
+		margin: 0px auto;
+		padding: 23px 0px;
+	}
+}
+
+@media only screen and (max-width: 526px){
+	.graph-container {
+		width: 400px;
+		margin: 0px auto;
+		padding: 23px 0px;
+	}
+}
