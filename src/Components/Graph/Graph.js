@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Bar, Chart } from "react-chartjs-2";
 import './Graph.css'
 
-
-
-
 function Graph({ days, loading, data, title }) {
 	Chart.defaults.global.legend.display = false;
 	Chart.defaults.global.defaultFontColor = "black";
@@ -16,20 +13,24 @@ function Graph({ days, loading, data, title }) {
 	const [fontSize, setFontSize] = useState(22);
 	Chart.defaults.global.defaultFontSize = fontSize;
 	useEffect(() => {
-		if (window.screen.width < 795) {
+		if (window.screen.width < 795 && window.screen.width > 525) {
 			setFontSize(18);
 		} else if (window.screen.width > 795) {
 			setFontSize(22);
-		} 
+		} else if(window.screen.width < 526) {
+			setFontSize(12)
+		}
 	}, [])
 
 	window.addEventListener("resize", function (event) {
 		let screenSize = document.body.clientWidth;
-		if(screenSize < 795) {
+		if (screenSize < 795 && window.screen.width > 525) {
 			setFontSize(18);
-		} else if(screenSize > 795) {
+		} else if (screenSize > 795) {
 			setFontSize(22);
-		} 
+		} else if (screenSize < 526) {
+			setFontSize(12);
+		}
 	});
 
 

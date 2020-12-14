@@ -15,9 +15,8 @@ function App() {
 	const currentDay = new Date().getDay();
 	const lon = -66.902;
 	const lat = 10.491;
-	const proxy = "https://cors-anywhere.herokuapp.com/";
 	const apiKey = config.apiKey;
-	const api = `${proxy}https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&lang=sp&units=metric&appid=${apiKey}`;
+	const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&lang=sp&units=metric&appid=${apiKey}`;
 	
 	useEffect(() => {
 		getWeather();
