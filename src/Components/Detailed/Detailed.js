@@ -5,12 +5,17 @@ import Loading from '../Loading/Loading';
 import './Detailed.css'
 
 function Detailed({days, weather, loading}) {
-  const [selectedDay, setSelectedDay] = useState(days[0]);
+	const [selectedDay, setSelectedDay] = useState(days[0]);
+	const [changedDay, setChangedDay] = useState(false);
   let index = days.indexOf(selectedDay);
 
 	const handleChange = (event) => {
 		setSelectedDay(event.target.value);
-  };
+	};
+	
+	const handleOnClick = () => {
+		setChangedDay(!changedDay);
+	}
 
   return (
 		<>
@@ -18,18 +23,21 @@ function Detailed({days, weather, loading}) {
 				<select
 					className="select-bar"
 					value={selectedDay}
-					onChange={handleChange}
+					onChange={(event) => {
+						handleChange(event);
+						handleOnClick();
+					}}
 				>
-					<option className="options" value={days[0]}>
+					<option className="options" value={days[0]} onClick={handleOnClick}>
 						{days[0]}
 					</option>
-					<option className="options" value={days[1]}>
+					<option className="options" value={days[1]} onClick={handleOnClick}>
 						{days[1]}
 					</option>
-					<option className="options" value={days[2]}>
+					<option className="options" value={days[2]} onClick={handleOnClick}>
 						{days[2]}
 					</option>
-					<option className="options" value={days[3]}>
+					<option className="options" value={days[3]} onClick={handleOnClick}>
 						{days[3]}
 					</option>
 					<option className="options" value={days[4]}>
@@ -45,7 +53,7 @@ function Detailed({days, weather, loading}) {
 			</div>
 			{loading ? (
 				<>
-					<Loading detailed={true}/>
+					<Loading detailed={true} />
 					<Graph />
 				</>
 			) : (
@@ -71,10 +79,11 @@ function Detailed({days, weather, loading}) {
 							weather.data.daily[index].temp.day,
 							weather.data.daily[index].temp.night,
 							weather.data.daily[index].temp.max,
-							weather.data.daily[index].temp.min
+							weather.data.daily[index].temp.min,
 						]}
+						changedDay={changedDay}
 						title="Variación de Temperatura"
-						days={['Día', 'Noche', 'Máxima', 'Mínima']}
+						days={["Día", "Noche", "Máxima", "Mínima"]}
 					/>
 				</>
 			)}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Bar, Chart } from "react-chartjs-2";
 import './Graph.css'
 
-function Graph({ days, loading, data, title }) {
+function Graph({ days, loading, data, title, changedDay }) {
 	Chart.defaults.global.legend.display = false;
 	Chart.defaults.global.defaultFontColor = "black";
 	Chart.defaults.global.defaultFontFamily =
@@ -32,7 +32,6 @@ function Graph({ days, loading, data, title }) {
 			setFontSize(12);
 		}
 	});
-
 
 	const chart = () => {
 		setChartData({
@@ -115,7 +114,8 @@ function Graph({ days, loading, data, title }) {
 	useEffect(() => {
 		chart();
 		// eslint-disable-next-line
-	}, []);
+		console.log(data);
+	}, [changedDay]);
 
 	return (
     <div className="graph-container">

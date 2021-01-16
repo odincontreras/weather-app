@@ -13,14 +13,14 @@ export default function General({days, weather, loading}) {
 			setdataMaxTemp(() => {
 				days.map((day) => {
 					let i = days.indexOf(day);
-					return dataMaxTemp.push(weather.data.daily[i].temp.max);
+					return dataMaxTemp.push(weather.data.daily[i].temp.day);
 				});
 			});
 		!loading &&
 			setdataMinTemp(() => {
 				days.map((day) => {
 					let i = days.indexOf(day);
-					return dataMinTemp.push(weather.data.daily[i].temp.min);
+					return dataMinTemp.push(weather.data.daily[i].temp.night);
 				});
 			});
 		// eslint-disable-next-line

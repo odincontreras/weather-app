@@ -32,7 +32,7 @@ function App() {
 		})
 		.catch((error) => {
 			console.log(error);
-			alert('There is a conexion problem, please reload.')
+			alert('There is a conexion problem, please reload.');
 		})
 	};
 
