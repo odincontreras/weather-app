@@ -11,6 +11,7 @@ function Graph({ days, loading, data, title, changedDay }) {
   const [chartData, setChartData] = useState({});
 	const [chartOptions, setChartOptions] = useState({});
 	const [fontSize, setFontSize] = useState(22);
+	const [titleFontSize, setTitleFontSize] = useState(30);
 	Chart.defaults.global.defaultFontSize = fontSize;
 	useEffect(() => {
 		if (window.screen.width < 795 && window.screen.width > 525) {
@@ -18,7 +19,8 @@ function Graph({ days, loading, data, title, changedDay }) {
 		} else if (window.screen.width > 795) {
 			setFontSize(22);
 		} else if(window.screen.width < 526) {
-			setFontSize(12)
+			setFontSize(12);
+			setTitleFontSize(12);
 		}
 	}, [])
 
@@ -30,6 +32,7 @@ function Graph({ days, loading, data, title, changedDay }) {
 			setFontSize(22);
 		} else if (screenSize < 526) {
 			setFontSize(12);
+			setTitleFontSize(27);
 		}
 	});
 
@@ -61,7 +64,7 @@ function Graph({ days, loading, data, title, changedDay }) {
 				display: true,
 				text: title,
 				fontStyle: "bold",
-				fontSize: 30,
+				fontSize: window.screen.width < 526 ? '23' : '30',
 				fontColor: "black",
 				fontFamily: "Kaushan Script",
 			},
@@ -114,7 +117,6 @@ function Graph({ days, loading, data, title, changedDay }) {
 	useEffect(() => {
 		chart();
 		// eslint-disable-next-line
-		console.log(data);
 	}, [changedDay]);
 
 	return (

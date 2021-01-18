@@ -42,7 +42,7 @@ export default function General({days, weather, loading}) {
 								temperatureDay={weather.data.daily[index].temp.day}
 								temperatureNight={weather.data.daily[index].temp.night}
 								icon={weather.data.daily[index].weather[0].icon}
-								description={weather.data.daily[0].weather[0].description}
+								description={weather.data.daily[index].weather[0].description}
 								key={day}
 							/>
 						</>
